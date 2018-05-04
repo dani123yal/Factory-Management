@@ -1,0 +1,80 @@
+﻿
+@model IEnumerable<factorySystem.Models.Company>
+
+
+@{
+    ViewBag.Title = "getCompany";
+}
+
+<h2>getCompany</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+    <input class="form-control" type="search"/>
+   
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Company_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Company_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Company_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Company_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+
+        
+    </tr>
+   
+    
+}
+
+</table>
+    @{
+        var d = from item in Model.Company where item.name = "dani" select item;
+
+        foreach (var str in d)
+        {
+            <h1>@str</h1>
+        }
+    }
+    

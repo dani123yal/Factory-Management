@@ -1,0 +1,38 @@
+﻿@model factorySystem.Models.DashboardModel
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container" style="background-color:#808080">
+    <h2 style="color:white">&nbsp;Dashboard</h2>
+</div>
+<div class="container" id="cont">
+    <div class="row">
+        <div class="col-md-4 dvgrid">
+            <div class="dvinner" style="background-color:#7360EE">
+                <i class="fa fa-building"></i>
+                &nbsp;
+                Companies
+                <center><h2 class="tot">5</h2></center>
+            </div>
+        </div>
+        
+        <div class="col-md-4 dvgrid">
+            <div class="dvinner" style="background-color:#25C6D8">
+                <i class="fa fa-tasks"></i>
+                &nbsp;
+                Requests
+                <center><h2 class="tot">10</h2></center>
+            </div>
+    </div>
+    @{ 
+        string[] data = { "dani", "nabeel", "fazeel", "sharjeel", "gulnaz", "mujeeb" };
+        var select = from word in data where word.Length <= 4 select word;
+        foreach(var word in select)
+        {
+            <h1>@word</h1>
+        }
+    }
+    </div>
+</div>
+
