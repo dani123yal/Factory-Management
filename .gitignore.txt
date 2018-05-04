@@ -1,0 +1,8 @@
+packages/*
+factorySystem/App_Start/*
+factorySystem/assets/*
+factorySystem/bs/*
+factorySystem/Content/*
+factorySystem/fontawesome-free-5.0.10/*
+factorySystem/fonts/*
+factorySystem/malihu-custom-scrollbar-plugin-master/*
